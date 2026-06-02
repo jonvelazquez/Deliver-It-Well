@@ -37,6 +37,7 @@ describe('server/app.js', function () {
         done();
       });
   });
+  
   it('page shows Bob Was Here', (done) => {
     chai.request(server)
       .get('/')
@@ -45,5 +46,5 @@ describe('server/app.js', function () {
         expect(JSON.stringify(res.text)).to.contain('Bob Was Here');
         done();
       });
-  });
+   });
 });
