@@ -37,4 +37,13 @@ describe('server/app.js', function () {
         done();
       });
   });
-})
+  it('page shows the custom <h2> text', (done) => {
+    chai.request(server)
+      .get('/')
+      .end((err, res) => {
+        expect(err).not.exist;
+        expect(JSON.stringify(res.text)).to.contain('Jonathan Was Here');
+        done();
+      });
+  });
+});
