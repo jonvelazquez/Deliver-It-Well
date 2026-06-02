@@ -37,7 +37,7 @@ describe('server/app.js', function () {
         done();
       });
   });
-  it('page shows the custom <h2> text', (done) => {
+  it('page shows Bob Was Here', (done) => {
     chai.request(server)
       .get('/')
       .end((err, res) => {
