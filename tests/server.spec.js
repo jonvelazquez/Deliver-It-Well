@@ -42,7 +42,7 @@ describe('server/app.js', function () {
       .get('/')
       .end((err, res) => {
         expect(err).not.exist;
-        expect(JSON.stringify(res.text)).to.contain('Jonathan Was Here');
+        expect(JSON.stringify(res.text)).to.contain('Bob Was Here');
         done();
       });
   });
