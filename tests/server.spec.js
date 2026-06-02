@@ -9,14 +9,14 @@ server.listen(4444);
 
 describe('server/app.js', function () {
   this.timeout(5000);
-  beforeEach((done) => {
 
+  beforeEach((done) => {
     done();
   });
 
   afterEach((done) => {
     done();
-  })
+  });
 
   it('responds to /', (done) => {
     chai.request(server)
@@ -37,7 +37,7 @@ describe('server/app.js', function () {
         done();
       });
   });
-  
+
   it('page shows Bob Was Here', (done) => {
     chai.request(server)
       .get('/')
@@ -46,5 +46,5 @@ describe('server/app.js', function () {
         expect(JSON.stringify(res.text)).to.contain('Bob Was Here');
         done();
       });
-   });
+  });
 });
